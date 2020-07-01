@@ -1,0 +1,50 @@
+body {
+    background-color:#eafaf0;
+}
+#content {
+    display: flex;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.column {
+    flex: 50%;
+    border: 1px solid lightseagreen;
+    padding: 3px;
+    margin: 10px;
+    text-align: center;
+}
+
+.internal_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact {
+    flex: 50%;
+    border: 1px solid lightgrey;
+    text-align: left;
+    padding: 4px 16px;
+}
+
+form {
+    margin-top: 12px;
+}
+
+input, textarea {
+    width: 100%;
+}
+
+.small {
+    font-size: 10pt;
+}
+
+@media screen and (max-width: 720px) {
+    #content {
+        flex: 100%;
+        flex-direction: column;
+    }
+
+    .contact {
+        width: 100%;
+    }
+}

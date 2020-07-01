@@ -1,0 +1,13 @@
+<h2>
+Hello, {{ name }}!
+</h2>
+
+Hey! You're all signed up to get matched with a friend-of-a-friend to offset housing costs.
+
+You can reach out to anyone on this site! Or, if you wait a bit, we will make introductions with someone on your behalf. :)
+
+When you're all done, click here to delete your entry.
+
+<a href="{{ delete_link }}">{{ delete_link }}</a>
+
+<em>We can't wait to see you!</em>

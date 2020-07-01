@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <div id="content">
+        <div id="hosts" class="column">
+            <h2>I have a space</h2>
+            <hr>
+            <div class="internal_row">
+                {% for host in hosts %}
+                <div class="contact">
+                    <h3>{{ host.name }} <span class="small">(Spots: {{ host.spots }})</span></h3>
+                    <h5>{{ host.email }} {{ host.phone }}</h5>
+                    <div class="message">
+                      <p>{{ host.message }}</p>
+                    </div>
+                </div> 
+                {% endfor %}
+            </div>
+            <form action="/host" id="host" method="post">
+              <fieldset>
+                <legend>Have a space to share? Put your contact info here.</legend>
+                <input type="text" name="name" placeholder="Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="tel" name="phone" placeholder="Phone Number">
+                <input type="number" name="spots" placeholder="Spots available">
+                <textarea name="message" form="host" placeholder="Enter any notes here, such as pets, babies, or allergies."></textarea>
+                <button>Submit</button>
+              </fieldset>
+            </form>
+        </div>
+        <div id="splitters" class="column">
+            <h2>Looking to share a room</h2>
+            <hr>
+            <div class="internal_row">
+                {% for split in splitters %}
+                <div class="contact">
+                    <h3>{{ split.name }}</h3>
+                    <h5>{{ split.email }} {{ split.phone }}</h5>
+                    <div class="message">
+                      <p>{{ split.message }}</p>
+                    </div>
+                </div> 
+                {% endfor %}
+            </div> 
+            <form action="/share" id="share" method="post">
+              <fieldset>
+                <legend>Looking to split a room? Put your contact info here.</legend>
+                <input type="text" name="name" placeholder="Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="tel" name="phone" placeholder="Phone Number">
+                <textarea name="message" form="share" placeholder="Enter any notes here, such as pets, babies, or allergies."></textarea>
+                <button>Submit</button>
+              </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
