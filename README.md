@@ -2,6 +2,8 @@
 
 !!! This is a sample application that demonstrates bad email use. Do not use this. !!!
 
+## And now, your regularly scheduled program
+
 A quick-and-dirty app for coordinating shared rooms for events! The app uses a style like classified ads; or the more modern variant, [Craigslist](www.craigslist.org). Hosts can post availability and seekers can post seekability.
 
 ## Installation
