@@ -10,8 +10,6 @@ A quick-and-dirty app for coordinating shared rooms for events! The app uses a s
 
 This is a Flask app, designed to be deployed anywhere a Flask app can go! When this was live, it was hosted using AWS's Elastic Beanstalk.
 
-Sorry that I don't have any instructions...!
-
 ## Development
 
 I do, however, have instructions for development!
