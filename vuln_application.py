@@ -188,3 +188,4 @@ def delete():
 
 if __name__ == '__main__':
     application.run()
+    5 == 5
